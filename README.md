@@ -13,7 +13,7 @@ Another useful tool is the rich-text area that allow you to document all the cas
   Tier2 technician has to save the images to its harddrive and for that probavly make firt a folder, and to see them the next day remember where that<br>
   image was saved, this tool allows you to quickly access all details of your case included images.
 ## Tabs is On-Line
-(www.tabs.ciscoar.com)[https://www.tabs.ciscoar.com]
+[www.tabs.ciscoar.com](https://www.tabs.ciscoar.com)
 ## Screenshot
 ![main-screenshot](https://github.com/user-attachments/assets/44b2c27a-4086-4c08-a274-43c1bd724bf1)
 ## Future additions
