@@ -1,5 +1,5 @@
 # Tabs webapp introduction
-![logo200x200-for-t2](https://github.com/user-attachments/assets/8b4137e3-3cc1-4d53-bd99-c3a092ffdc6e)
+![logo200x200-for-t2](https://github.com/user-attachments/assets/8b4137e3-3cc1-4d53-bd99-c3a092ffdc6e)<br>
 The idea behind `"Tabs"` was to create a tool for **Tier 2 technicians** that simplifies the process of saving and retrieving information.<br>
 Tier 2 technicians handle multiple cases (tickets) throughout the day, accessing different portals and collecting a large amount of data for each case.<br>
 With Tabs, they now have a centralized location where all the details gathered for a single case can be quickly accessed.<br>
