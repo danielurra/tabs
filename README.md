@@ -28,6 +28,6 @@ Tabs webapp has been built by using below languages and technologies
 * Node.js
 * JWT (JSON Web Token) for authentication and authorization
 ## Future additions
-The main addition will be the creation of a **backend** using Node.js with JWT as the authentication method. This will allow visitors to<br>
+The main addition will be the creation of a **backend** using `Node.js` with `JWT` as the authentication method. This will allow visitors to<br>
 log in and resume their work from the point where they left off. There are also other minor additions in the pipeline, <br>
 but they are not as relevant at this moment.
