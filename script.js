@@ -191,3 +191,25 @@ function formatText(command) {
 function highlightText() {
     document.execCommand('backColor', false, 'yellow');
 }
+
+// Function to create a clickable link
+function createLink() {
+    const url = prompt("Enter the URL", "https://");
+    if (url) {
+        document.execCommand("createLink", false, url);
+    }
+}
+
+// Handle link clicks inside contenteditable areas
+document.addEventListener('click', function(event) {
+    // Check if the clicked element is a link (A tag) inside a contenteditable area
+    if (event.target.tagName === 'A' && event.target.closest('[contenteditable="true"]')) {
+        const href = event.target.getAttribute('href');
+        
+        // Open the link in a new tab if it's a valid URL
+        if (href) {
+            event.preventDefault();
+            window.open(href, '_blank');
+        }
+    }
+});
