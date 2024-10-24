@@ -4,7 +4,7 @@ Tier 2 technicians handle multiple cases (tickets) throughout the day, accessing
 With Tabs, they now have a centralized location where all the details gathered for a single case can be quickly accessed.<br>
 ## Main features
 * **Text Manipulation**:
-This tool features a text manipulation area that allows you to remove undesired characters, such as parentheses, dashes, colons, etc. 
+This tool features a `text manipulation area` that allows you to remove undesired characters, such as parentheses, dashes, colons, etc. 
 Once you've cleaned up your text, the tool enables you to copy it to the clipboard and save it for future reference.
 * **Rich text area**
 Another useful feature is the `rich-text area`, which allows you to document all case details while utilizing formatting options like bold, highlighting (in yellow), lists, and more.
