@@ -13,7 +13,7 @@ Another useful feature is the `rich-text area`, which allows you to document all
   Each tab can include images to validate or support the information being addressed in that particular tab. This feature is highly desirable because, without it,
   Tier 2 technicians would need to save images to their hard drives, likely creating a folder for organization. They would then have to remember
   where each image was saved when accessing them the next day. This tool allows quick access to all case details, including images.
-  It is quite common you want to be able to save/document both the before and after of some particular change, this is easily done by saving two images.
+  It is quite common you want to be able to save/document both the **before** and **after** of some particular change, this is easily done by saving two images.
 ## Tabs is On-Line
 [www.tabs.ciscoar.com](https://www.tabs.ciscoar.com)
 ## Screenshot
