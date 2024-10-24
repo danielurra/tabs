@@ -1,6 +1,6 @@
 # Tabs webapp introduction
-The idea behind "Tabs" was to create a tool to be used by the **Tier2 technicians** to make easy to save and retrieve information<br>
-Tier2 technicians work with multiple cases (tickets) during the day for each case, they access different portals and collect data<br>
+The idea behind "Tabs" was to create a tool to be used by the **Tier2 technicians** to make it easy to save and retrieve information<br>
+Tier2 technicians work with multiple cases (tickets) during the day for each case, they access different portals and collect tons of data<br>
 By using Tabs they can now have a place where all the details gathered for on case can be quickly accesible.<br>
 ## Main features
 * Text Manipulation:
