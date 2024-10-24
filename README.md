@@ -6,6 +6,7 @@ The tool feature on text manipularion area that allow you to remove undesired ch
 Once you've cleaned up your text the tool will allow you so copy it to clipborad and also save for future reference.
 Another useful tool is the rich-text area that allow you to document all the case details and make use of bold, highlight(yellow), lists, etc.
 ## Screenshot
+![main-screenshot](https://github.com/user-attachments/assets/44b2c27a-4086-4c08-a274-43c1bd724bf1)
 ## Future additions
 The main addition will be to create a backend with node.js and JWT as the authentication method that will allow visitors to login-in<br>
 and be able to resume their job at the same point they left it.
