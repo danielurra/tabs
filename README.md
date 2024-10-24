@@ -9,9 +9,9 @@ Once you've cleaned up your text, the tool enables you to copy it to the clipboa
 * **Rich text area**
 Another useful feature is the `rich-text area`, which allows you to document all case details while utilizing formatting options like bold, highlighting (in yellow), lists, and more.
 * **Image Pasting area**
-  Each tab can have images to validate/support whatever is being treated on that particular Tab, this tool is highly desired because otherwise the <br>
-  Tier2 technician has to save the images to its harddrive and for that probavly make firt a folder, and to see them the next day remember where that<br>
-  image was saved, this tool allows you to quickly access all details of your case included images.
+  Each tab can include images to validate or support the information being addressed in that particular tab. This feature is highly desirable because, without it,
+  Tier 2 technicians would need to save images to their hard drives, likely creating a folder for organization. They would then have to remember
+  where each image was saved when accessing them the next day. This tool allows quick access to all case details, including images.
 ## Tabs is On-Line
 [www.tabs.ciscoar.com](https://www.tabs.ciscoar.com)
 ## Screenshot
