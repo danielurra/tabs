@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggleable Tabs with Text Manipulation</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+    <!-- Favicon -->
+  </head>
+  <body>
+    <div class="header">
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="../images/logo200x200-for-t2.png" alt="Site Logo" class="logo" />
+      </div>
+
+      <!-- Input field to change page title -->
+      <div class="page-title-container">
+        <label style="font-size: 30px" for="pageTitle"
+          >Change Page Title:
+        </label>
+        <input
+          id="pageTitleInput"
+          type="text"
+          style="font-size: 30px"
+          id="pageTitle"
+          placeholder="Enter new page title"
+          oninput="changePageTitle(this.value)"
+        />
+        <!-- Add a Save PageTitleContent button -->
+        <button onclick="savePageTitleContent()">Save Title</button>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <div>
+        <div class="tab" id="tabLabel1" onclick="openTab(event, 'tab1')">
+          Tab 1
+        </div>
+        <input
+          type="text"
+          placeholder="Rename Tab 1"
+          oninput="renameTab('tabLabel1', 'tabTitle1', this.value)"
+          id="renameTab1"
+          onkeypress="activateTabOnEnter(event, 'tab1')"
+        />
+      </div>
+      <div>
+        <div class="tab" id="tabLabel2" onclick="openTab(event, 'tab2')">
+          Tab 2
+        </div>
+        <input
+          type="text"
+          placeholder="Rename Tab 2"
+          oninput="renameTab('tabLabel2', 'tabTitle2', this.value)"
+          id="renameTab2"
+          onkeypress="activateTabOnEnter(event, 'tab2')"
+        />
+      </div>
+      <div>
+        <div class="tab" id="tabLabel3" onclick="openTab(event, 'tab3')">
+          Tab 3
+        </div>
+        <input
+          type="text"
+          placeholder="Rename Tab 3"
+          oninput="renameTab('tabLabel3', 'tabTitle3', this.value)"
+          id="renameTab3"
+          onkeypress="activateTabOnEnter(event, 'tab3')"
+        />
+      </div>
+      <div>
+        <div class="tab" id="tabLabel4" onclick="openTab(event, 'tab4')">
+          Tab 4
+        </div>
+        <input
+          type="text"
+          placeholder="Rename Tab 4"
+          oninput="renameTab('tabLabel4', 'tabTitle4', this.value)"
+          id="renameTab4"
+          onkeypress="activateTabOnEnter(event, 'tab4')"
+        />
+      </div>
+      <div>
+        <div class="tab" id="tabLabel5" onclick="openTab(event, 'tab5')">
+          Tab 5
+        </div>
+        <input
+          type="text"
+          placeholder="Rename Tab 5"
+          oninput="renameTab('tabLabel5', 'tabTitle5', this.value)"
+          id="renameTab5"
+          onkeypress="activateTabOnEnter(event, 'tab5')"
+        />
+      </div>
+      <div>
+        <div class="tab" id="tabLabel6" onclick="openTab(event, 'tab6')">
+          Tab 6
+        </div>
+        <input
+          type="text"
+          placeholder="Rename Tab 6"
+          oninput="renameTab('tabLabel6', 'tabTitle6', this.value)"
+          id="renameTab6"
+          onkeypress="activateTabOnEnter(event, 'tab6')"
+        />
+      </div>
+    </div>
+
+    <!-- Tab 1 -->
+    <div id="tab1" class="tab-content">
+      <h3 id="tabTitle1">Text clean-up tool</h3>
+      <div class="button-group">
+        <button onclick="removeParentheses('tab1')">Remove Parentheses</button>
+        <button onclick="removeDashes('tab1')">Remove Dashes</button>
+        <button onclick="removeNonDigits('tab1')">Remove Non-Digits</button>
+        <button onclick="removeColons('tab1')">Remove Colons</button>
+        <!-- New Button -->
+      </div>
+      <textarea
+        id="paragraphInput"
+        rows="4"
+        cols="50"
+        style="font-size: 30px"
+        placeholder="Enter text for Tab 1..."
+      ></textarea
+      ><br />
+      <div class="button-group-below-txtarea">
+        <button class="button-cpy-to-clipb" onclick="copyToClipboard('tab1')">Copy to Clipboard</button>
+        <!-- Add a Save Textarea Content button -->
+        <button onclick="saveTextareaContent()">Save Textarea Content</button>
+      </div>
+      <p id="output-tab1"></p>
+
+      <!-- Rich Text Section for Tab 1 -->
+      <h3>Rich Text section - text with format</h3>
+      <!-- Contenteditable area -->
+      <div class="rich-text-area" id="richTextArea-tab1" contenteditable="true">
+        <p>Enter text, format buttons below...</p>
+      </div>
+      <!-- Toolbar for formatting -->
+      <div class="toolbar">
+        <button onclick="formatText('bold')">Bold</button>
+        <button onclick="highlightText()">Highlight</button>
+        <button onclick="formatText('insertUnorderedList')">Bullet List</button>
+        <button onclick="formatText('insertOrderedList')">Numbered List</button>
+      </div>
+
+
+      <!-- Image Paste Section -->
+      <h3>Image Paste Section</h3>
+      <div class="button-group">
+        <button onclick="copyImageContent('tab1')">Copy Image</button>
+      </div>
+      <div
+        id="imagePasteArea-tab1"
+        contenteditable="true"
+        style="
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 300px;
+          height: 200px;
+          overflow: auto;
+        "
+      >
+        <p>Click here and paste an image (Ctrl+V or Command+V).</p>
+      </div>
+    </div>
+
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab-content">
+      <h3 id="tabTitle1">Text clean-up tool</h3>
+      <div class="button-group">
+        <button onclick="removeParentheses('tab2')">Remove Parentheses</button>
+        <button onclick="removeDashes('tab2')">Remove Dashes</button>
+        <button onclick="removeNonDigits('tab2')">Remove Non-Digits</button>
+        <button onclick="removeColons('tab2')">Remove Colons</button>
+        <!-- New Button -->
+      </div>
+      <textarea
+        id="paragraphInput"
+        rows="4"
+        cols="50"
+        style="font-size: 30px"
+        placeholder="Enter text for Tab 2..."
+      ></textarea
+      ><br />
+      <div class="button-group-below-txtarea">
+        <button class="button-cpy-to-clipb" onclick="copyToClipboard('tab2')">Copy to Clipboard</button>
+        <!-- Add a Save Textarea Content button -->
+        <button onclick="saveTextareaContent()">Save Textarea Content</button>
+      </div>
+      <p id="output-tab2"></p>
+
+      <!-- Rich Text Section for Tab 2 -->
+      <h3>Rich Text section - text with format</h3>
+      <!-- Contenteditable area -->
+      <div class="rich-text-area" id="richTextArea-tab2" contenteditable="true">
+        <p>Enter text, format buttons below...</p>
+      </div>
+      <!-- Toolbar for formatting -->
+      <div class="toolbar">
+        <button onclick="formatText('bold')">Bold</button>
+        <button onclick="highlightText()">Highlight</button>
+        <button onclick="formatText('insertUnorderedList')">Bullet List</button>
+        <button onclick="formatText('insertOrderedList')">Numbered List</button>
+      </div>
+
+      <!-- Image Paste Section for Tab 2 -->
+      <h3>Image Paste Section</h3>
+      <div class="button-group">
+        <button onclick="copyImageContent('tab2')">Copy Image</button>
+      </div>
+      <div
+        id="imagePasteArea-tab2"
+        contenteditable="true"
+        style="
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 300px;
+          height: 200px;
+          overflow: auto;
+        "
+      >
+        <p>Click here and paste an image (Ctrl+V or Command+V).</p>
+      </div>
+    </div>
+
+    <!-- Tab 3 -->
+    <div id="tab3" class="tab-content">
+      <h3 id="tabTitle1">Text clean-up tool</h3>
+      <div class="button-group">
+        <button onclick="removeParentheses('tab3')">Remove Parentheses</button>
+        <button onclick="removeDashes('tab3')">Remove Dashes</button>
+        <button onclick="removeNonDigits('tab3')">Remove Non-Digits</button>
+        <button onclick="removeColons('tab3')">Remove Colons</button>
+        <!-- New Button -->
+      </div>
+      <textarea
+        id="paragraphInput"
+        rows="4"
+        cols="50"
+        style="font-size: 30px"
+        placeholder="Enter text for Tab 3..."
+      ></textarea
+      ><br />
+      <div class="button-group-below-txtarea">
+        <button class="button-cpy-to-clipb" onclick="copyToClipboard('tab3')">Copy to Clipboard</button>
+        <!-- Add a Save Textarea Content button -->
+        <button onclick="saveTextareaContent()">Save Textarea Content</button>
+      </div>
+      <p id="output-tab3"></p>
+
+      <!-- Rich Text Section for Tab 3 -->
+      <h3>Rich Text section - text with format</h3>
+      <!-- Contenteditable area -->
+      <div class="rich-text-area" id="richTextArea-tab3" contenteditable="true">
+        <p>Enter text, format buttons below...</p>
+      </div>
+      <!-- Toolbar for formatting -->
+      <div class="toolbar">
+        <button onclick="formatText('bold')">Bold</button>
+        <button onclick="highlightText()">Highlight</button>
+        <button onclick="formatText('insertUnorderedList')">Bullet List</button>
+        <button onclick="formatText('insertOrderedList')">Numbered List</button>
+      </div>
+
+      <!-- Image Paste Section for Tab 3 -->
+      <h3>Image Paste Section</h3>
+      <div class="button-group">
+        <button onclick="copyImageContent('tab3')">Copy Image</button>
+      </div>
+      <div
+        id="imagePasteArea-tab3"
+        contenteditable="true"
+        style="
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 300px;
+          height: 200px;
+          overflow: auto;
+        "
+      >
+        <p>Click here and paste an image (Ctrl+V or Command+V).</p>
+      </div>
+    </div>
+
+    <!-- Tab 4 -->
+    <div id="tab4" class="tab-content">
+      <h3 id="tabTitle1">Text clean-up tool</h3>
+      <div class="button-group">
+        <button onclick="removeParentheses('tab4')">Remove Parentheses</button>
+        <button onclick="removeDashes('tab4')">Remove Dashes</button>
+        <button onclick="removeNonDigits('tab4')">Remove Non-Digits</button>
+        <button onclick="removeColons('tab4')">Remove Colons</button>
+        <!-- New Button -->
+      </div>
+      <textarea
+        id="paragraphInput"
+        rows="4"
+        cols="50"
+        style="font-size: 30px"
+        placeholder="Enter text for Tab 4..."
+      ></textarea
+      ><br />
+      <div class="button-group-below-txtarea">
+        <button class="button-cpy-to-clipb" onclick="copyToClipboard('tab4')">Copy to Clipboard</button>
+        <!-- Add a Save Textarea Content button -->
+        <button onclick="saveTextareaContent()">Save Textarea Content</button>
+      </div>
+      <p id="output-tab4"></p>
+
+      <!-- Rich Text Section for Tab 4 -->
+      <h3>Rich Text section - text with format</h3>
+      <!-- Contenteditable area -->
+      <div class="rich-text-area" id="richTextArea-tab4" contenteditable="true">
+        <p>Enter text, format buttons below...</p>
+      </div>
+      <!-- Toolbar for formatting -->
+      <div class="toolbar">
+        <button onclick="formatText('bold')">Bold</button>
+        <button onclick="highlightText()">Highlight</button>
+        <button onclick="formatText('insertUnorderedList')">Bullet List</button>
+        <button onclick="formatText('insertOrderedList')">Numbered List</button>
+      </div>
+
+      <!-- Image Paste Section for Tab 4 -->
+      <h3>Image Paste Section</h3>
+      <div class="button-group">
+        <button onclick="copyImageContent('tab4')">Copy Image</button>
+      </div>
+      <div
+        id="imagePasteArea-tab4"
+        contenteditable="true"
+        style="
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 300px;
+          height: 200px;
+          overflow: auto;
+        "
+      >
+        <p>Click here and paste an image (Ctrl+V or Command+V).</p>
+      </div>
+    </div>
+
+    <!-- Tab 5 -->
+    <div id="tab5" class="tab-content">
+      <h3 id="tabTitle1">Text clean-up tool</h3>
+      <div class="button-group">
+        <button onclick="removeParentheses('tab5')">Remove Parentheses</button>
+        <button onclick="removeDashes('tab5')">Remove Dashes</button>
+        <button onclick="removeNonDigits('tab5')">Remove Non-Digits</button>
+        <button onclick="removeColons('tab5')">Remove Colons</button>
+        <!-- New Button -->
+      </div>
+      <textarea
+        id="paragraphInput"
+        rows="4"
+        cols="50"
+        style="font-size: 30px"
+        placeholder="Enter text for Tab 5..."
+      ></textarea
+      ><br />
+      <div class="button-group-below-txtarea">
+        <button class="button-cpy-to-clipb" onclick="copyToClipboard('tab5')">Copy to Clipboard</button>
+        <!-- Add a Save Textarea Content button -->
+        <button onclick="saveTextareaContent()">Save Textarea Content</button>
+      </div>
+      <p id="output-tab5"></p>
+
+      <!-- Rich Text Section for Tab 5 -->
+      <h3>Rich Text section - text with format</h3>
+      <!-- Contenteditable area -->
+      <div class="rich-text-area" id="richTextArea-tab5" contenteditable="true">
+        <p>Enter text, format buttons below...</p>
+      </div>
+      <!-- Toolbar for formatting -->
+      <div class="toolbar">
+        <button onclick="formatText('bold')">Bold</button>
+        <button onclick="highlightText()">Highlight</button>
+        <button onclick="formatText('insertUnorderedList')">Bullet List</button>
+        <button onclick="formatText('insertOrderedList')">Numbered List</button>
+      </div>
+
+      <!-- Image Paste Section for Tab 5 -->
+      <h3>Image Paste Section</h3>
+      <div class="button-group">
+        <button onclick="copyImageContent('tab5')">Copy Image</button>
+      </div>
+      <div
+        id="imagePasteArea-tab5"
+        contenteditable="true"
+        style="
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 300px;
+          height: 200px;
+          overflow: auto;
+        "
+      >
+        <p>Click here and paste an image (Ctrl+V or Command+V).</p>
+      </div>
+    </div>
+
+    <!-- Tab 6 -->
+    <div id="tab6" class="tab-content">
+      <h3 id="tabTitle1">Text clean-up tool</h3>
+      <div class="button-group">
+        <button onclick="removeParentheses('tab6')">Remove Parentheses</button>
+        <button onclick="removeDashes('tab6')">Remove Dashes</button>
+        <button onclick="removeNonDigits('tab6')">Remove Non-Digits</button>
+        <button onclick="removeColons('tab6')">Remove Colons</button>
+        <!-- New Button -->
+      </div>
+      <textarea
+        id="paragraphInput"
+        rows="4"
+        cols="50"
+        style="font-size: 30px"
+        placeholder="Enter text for Tab 6..."
+      ></textarea
+      ><br />
+      <div class="button-group-below-txtarea">
+        <button class="button-cpy-to-clipb" onclick="copyToClipboard('tab6')">Copy to Clipboard</button>
+        <!-- Add a Save Textarea Content button -->
+        <button onclick="saveTextareaContent()">Save Textarea Content</button>
+      </div>
+      <p id="output-tab6"></p>
+
+      <!-- Rich Text Section for Tab 6 -->
+      <h3>Rich Text section - text with format</h3>
+      <!-- Contenteditable area -->
+      <div class="rich-text-area" id="richTextArea-tab6" contenteditable="true">
+        <p>Enter text, format buttons below...</p>
+      </div>
+      <!-- Toolbar for formatting -->
+      <div class="toolbar">
+        <button onclick="formatText('bold')">Bold</button>
+        <button onclick="highlightText()">Highlight</button>
+        <button onclick="formatText('insertUnorderedList')">Bullet List</button>
+        <button onclick="formatText('insertOrderedList')">Numbered List</button>
+      </div>
+
+      <!-- Image Paste Section for Tab 6 -->
+      <h3>Image Paste Section</h3>
+      <div class="button-group">
+        <button onclick="copyImageContent('tab6')">Copy Image</button>
+      </div>
+      <div
+        id="imagePasteArea-tab6"
+        contenteditable="true"
+        style="
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 300px;
+          height: 200px;
+          overflow: auto;
+        "
+      >
+        <p>Click here and paste an image (Ctrl+V or Command+V).</p>
+      </div>
+    </div>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+/* Style for the active container around text and image areas */
+.active-container {
+  border: 2px solid #ddd; /* Matching the active tab button */
+  background-color: #f1f1f1; /* Lighter background for active container */
+  padding: 10px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Style for the body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f5; /* Light grayish-blue background color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header and logo container */
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  /* margin-top: 20px;  /* 20px space from the top */
+  /* margin-left: 20px; /* 20px space from the left */
+  margin: 20px; /* Adds 20px space to all sides: top, right, bottom, and left */
+}
+
+.page-title-container {
+  display: flex;
+  align-items: center;
+  margin: 20px; /* Adds 20px space to all sides: top, right, bottom, and left */
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Input field for page title */
+.page-title-container input {
+  padding: 5px;
+  font-size: 16px;
+  margin: 20px; /* Adds 20px space to all sides: top, right, bottom, and left */
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border-bottom: 2px solid #ccc; /* Added border to bottom of tabs container */
+}
+
+/* Tab style */
+/* Tab buttons initial styling */
+/* Increase the font size for all tab buttons */
+.tab {
+  font-size: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-bottom: none; /* Make the bottom border invisible to blend with the content area */
+  /*background-color: #f1f1f1;*/
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Colors for each tab button corresponding to their tab content */
+#tabLabel1 {
+  background-color: #f1f1f1; /* Matches Tab 1 content */
+}
+#tabLabel2 {
+  background-color: #e0f7fa; /* Matches Tab 2 content */
+}
+#tabLabel3 {
+  background-color: #fff9c4; /* Matches Tab 3 content */
+}
+#tabLabel4 {
+  background-color: #fce4ec; /* Matches Tab 4 content */
+}
+#tabLabel5 {
+  background-color: #e8f5e9; /* Matches Tab 5 content */
+}
+#tabLabel6 {
+  background-color: #ede7f6; /* Matches Tab 6 content */
+}
+
+/* Add a hover color modification if you want more than just opacity */
+#tabLabel1:hover {
+  background-color: #e0e0e0; /* Slightly darker gray for hover */
+}
+#tabLabel2:hover {
+  background-color: #b2ebf2; /* Slightly darker blue for hover */
+}
+#tabLabel3:hover {
+  background-color: #fff59d; /* Slightly darker yellow for hover */
+}
+#tabLabel4:hover {
+  background-color: #f8bbd0; /* Slightly darker pink for hover */
+}
+#tabLabel5:hover {
+  background-color: #c8e6c9; /* Slightly darker green for hover */
+}
+#tabLabel6:hover {
+  background-color: #d1c4e9; /* Slightly darker purple for hover */
+}
+
+/* Active tab styling */
+.tab.active {
+  /*background-color: #ddd;*/
+  opacity: 1;
+  border-bottom: 2px solid #fff; /* Make sure active tab doesn't have a bottom border */
+  font-weight: bold; /* Optional: Make the active tab text bold */
+}
+
+/* Tab content area */
+/* Make sure the parent container of the image paste area can stretch */
+.tab-content {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: -1px; /* Overlap with the tab for seamless design */
+  width: 100%; /* Allow the tab content to stretch full width */
+  max-width: 100%; /* Prevent any fixed width limitation */
+  box-sizing: border-box;
+}
+
+/* Show active tab content */
+.tab-content.active {
+  display: block;
+}
+
+/* Hover effect for tabs */
+.tab:hover {
+  /*background-color: #e0e0e0;*/
+  opacity: 0.8; /* Slightly transparent on hover */
+}
+
+/* Input field under tabs */
+.tabs div input[type="text"] {
+  margin-top: 5px;
+  margin-bottom: 5px; /* Adds 10px space between the input box and the tab button */
+  padding: 5px;
+}
+
+/* General active container styling */
+.active-container {
+  border: 2px solid #888;
+  padding: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Tab 1 container styling */
+.tab1-container {
+  background-color: #f1f1f1; /* Light gray for Tab 1 */
+  border-color: #ccc;
+}
+
+/* Tab 2 container styling */
+.tab2-container {
+  background-color: #e0f7fa; /* Light blue for Tab 2 */
+  border-color: #b3e5fc;
+}
+
+/* Tab 3 container styling */
+.tab3-container {
+  background-color: #fff9c4; /* Light yellow for Tab 3 */
+  border-color: #fff176;
+}
+
+/* Tab 4 container styling */
+.tab4-container {
+  background-color: #fce4ec; /* Light pink for Tab 4 */
+  border-color: #f48fb1;
+}
+
+/* Tab 5 container styling */
+.tab5-container {
+  background-color: #e8f5e9; /* Light green for Tab 5 */
+  border-color: #a5d6a7;
+}
+
+/* Tab 6 container styling */
+.tab6-container {
+  background-color: #ede7f6; /* Light purple for Tab 6 */
+  border-color: #ce93d8;
+}
+
+/* Rest of your styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f5;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Ensure the image paste area is always white */
+/* Ensure the image paste area is full width and has a white background */
+[contenteditable="true"] {
+  background-color: #fff; /* White background */
+  border: 1px solid #ccc; /* Keep a border to match the surrounding style */
+  padding: 10px;
+  width: 100%; /* Make it full width */
+  height: auto; /* Let the height adjust based on content */
+  min-height: 400px; /* Set a minimum height */
+  min-width: 1200px;
+  overflow: auto; /* Enable scrolling if content overflows */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  border-radius: 4px; /* Optional: smooth corners */
+}
+/* Add space below the buttons */
+.button-group button {
+  margin-bottom: 10px; 
+}
+
+.button-group-below-txtarea {
+  display: flex;
+  margin-left: 0.2px; /* separa los dos botones desde el lado izq*/
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.button-cpy-to-clipb {
+    margin-right: 10px; /* separa el boton de la iz 10px del boton de la derecha*/
+}
+
+/* Place the input above the tab button */
+.tabs div {
+  display: flex;
+  flex-direction: column-reverse; /* Reverses the column direction to place input above the button */
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* Set the width of the input and tab buttons to match */
+.tabs div input[type="text"],
+.tab {
+  width: 200px; /* Set a consistent width for both input and tab button */
+  text-align: center; /* Optional: Center the text inside the button */
+}
+/* Toolbar styles */
+.toolbar {
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.toolbar button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar button:hover {
+    background-color: #1e0af7;
+}
+
+/* Rich text area styles */
+.rich-text-area {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    box-sizing: border-box;
+}
