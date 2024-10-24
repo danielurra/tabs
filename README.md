@@ -1,7 +1,7 @@
 # Tabs webapp introduction
-The idea behind "Tabs" was to create a tool to be used by the **Tier2 technicians** to make it easy to save and retrieve information<br>
-Tier2 technicians work with multiple cases (tickets) during the day for each case, they access different portals and collect tons of data<br>
-By using Tabs they can now have a place where all the details gathered for one case can be quickly accesed.<br>
+The idea behind "Tabs" was to create a tool for Tier 2 technicians that simplifies the process of saving and retrieving information.<br>
+Tier 2 technicians handle multiple cases (tickets) throughout the day, accessing different portals and collecting a large amount of data for each case.<br>
+With Tabs, they now have a centralized location where all the details gathered for a single case can be quickly accessed.<br>
 ## Main features
 * Text Manipulation:
 The tool feature on text manipularion area that allow you to remove undesired characters, like parenthesis, dashes, colon, etc.
