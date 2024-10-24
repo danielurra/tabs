@@ -20,14 +20,14 @@ Another useful feature is the `rich-text area`, which allows you to document all
 ![main-screenshot](https://github.com/user-attachments/assets/44b2c27a-4086-4c08-a274-43c1bd724bf1)
 ## Technology stack
 Tabs webapp has been built by using below languages and technologies
-### Front End
+### Frontend
 * vanilla JavaScript
 * HTML
 * CSS
-### Back End
+### Backend
 * Node.js
 * JWT (JSON Web Token) for authentication and authorization
 ## Future additions
-The main addition will be the creation of a backend using Node.js with JWT as the authentication method. This will allow visitors to<br>
+The main addition will be the creation of a **backend** using Node.js with JWT as the authentication method. This will allow visitors to<br>
 log in and resume their work from the point where they left off. There are also other minor additions in the pipeline, <br>
 but they are not as relevant at this moment.
