@@ -24,9 +24,10 @@ Tabs webapp has been built by using below languages and technologies
 * vanilla JavaScript
 * HTML
 * CSS
-### Backend
-* Node.js
+### Backend (work in progress)
+* Node.js or PHP
 * JWT (JSON Web Token) for authentication and authorization
+* Database MySQL or Postgre
 ## Future additions
 The main addition will be the creation of a **backend** using `Node.js` with `JWT` as the authentication method. This will allow visitors to<br>
 log in and resume their work from the point where they left off. There are also other minor additions in the pipeline, <br>
