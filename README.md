@@ -16,6 +16,15 @@ Another useful tool is the rich-text area that allow you to document all the cas
 [www.tabs.ciscoar.com](https://www.tabs.ciscoar.com)
 ## Screenshot
 ![main-screenshot](https://github.com/user-attachments/assets/44b2c27a-4086-4c08-a274-43c1bd724bf1)
+## Technology stack
+Tabs webapp has been built by using below languages and technologies
+### Front End
+* vanilla JavaScript
+* HTML
+* CSS
+### Back End
+Node.js
+JWT (Jason Web Tocken) for Authentication
 ## Future additions
 The main addition will be to create a backend with node.js and JWT as the authentication method that will allow visitors to login-in<br>
 and be able to resume their job at the same point they left it.
