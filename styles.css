@@ -276,9 +276,24 @@ body {
     background-color: white;
     box-sizing: border-box;
 }
+/* Styling for links inside contenteditable areas */
 /* Ensure links inside contenteditable areas have a pointer cursor */
 .rich-text-area a {
   cursor: pointer;
   color: blue;
   text-decoration: underline;
+}
+/* Bold text */
+.rich-text-area strong {
+  font-weight: bold;
+}
+
+/* Highlighted text */
+.rich-text-area span[style*="background-color"] {
+  background-color: yellow;
+}
+
+/* Unordered and Ordered Lists */
+.rich-text-area ul, .rich-text-area ol {
+  margin-left: 20px;
 }
