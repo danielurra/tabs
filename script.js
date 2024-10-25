@@ -32,13 +32,13 @@ function openTab(evt, tabName) {
 }
 
 function copyToClipboard(tabName) {
-    const textarea = document.querySelector(`#${tabName} textarea`);
+    const textarea = document.querySelector(#${tabName} textarea);
     textarea.select();
     document.execCommand("copy");
     
     // Display the copied text below the textarea
-    const output = document.getElementById(`output-${tabName}`);
-    output.textContent = `Copied: ${textarea.value}`;
+    const output = document.getElementById(output-${tabName});
+    output.textContent = Copied: ${textarea.value};
 }
 
 function removeParentheses(tabName) {
@@ -182,24 +182,6 @@ function activateTabOnEnter(event, tabId) {
     }
 }
 
-// Function to format text (bold, list, etc.)
-function formatText(command) {
-    document.execCommand(command, false, null);
-}
-
-// Function to highlight text (yellow background)
-function highlightText() {
-    document.execCommand('backColor', false, 'yellow');
-}
-
-// Function to create a clickable link
-function createLink() {
-    const url = prompt("Enter the URL", "https://");
-    if (url) {
-        document.execCommand("createLink", false, url);
-    }
-}
-
 // Handle link clicks inside contenteditable areas
 document.addEventListener('click', function(event) {
     // Check if the clicked element is a link (A tag) inside a contenteditable area
@@ -213,3 +195,65 @@ document.addEventListener('click', function(event) {
         }
     }
 });
+
+// Rich text BOLD
+function toggleBold() {
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const strong = document.createElement('strong');
+        range.surroundContents(strong);
+    }
+}
+// Rich text Highlight Text
+function highlightText() {
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const span = document.createElement('span');
+        span.style.backgroundColor = 'yellow';
+        range.surroundContents(span);
+    }
+}
+// Rich text Create Links
+function createLink() {
+    const url = prompt("Enter the URL", "https://");
+    if (!url) return;
+    
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const a = document.createElement('a');
+        a.href = url;
+        a.target = '_blank'; // Opens the link in a new tab
+        range.surroundContents(a);
+    }
+}
+// Rich text Unordered List
+function insertUnorderedList() {
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const ul = document.createElement('ul');
+        const li = document.createElement('li');
+        li.textContent = selection.toString();
+        ul.appendChild(li);
+        range.deleteContents();
+        range.insertNode(ul);
+    }
+}
+// Rich text Ordered List
+function insertOrderedList() {
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const ol = document.createElement('ol');
+        const li = document.createElement('li');
+        li.textContent = selection.toString();
+        ol.appendChild(li);
+        range.deleteContents();
+        range.insertNode(ol);
+    }
+}
+
+
