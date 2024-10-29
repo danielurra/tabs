@@ -34,7 +34,11 @@ function openTab(evt, tabName) {
 function copyToClipboard(tabName) {
     const textarea = document.querySelector(`#${tabName} textarea`);
     textarea.select();
-    document.execCommand("copy");
+    navigator.clipboard.writeText(textarea.value).then(() => {
+        console.log('Text copied to clipboard');
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
     
     // Display the copied text below the textarea
     const output = document.getElementById(`output-${tabName}`);
@@ -119,7 +123,11 @@ function setupImagePasteListener(tabName) {
 // Copy the content of the image section for each tab
 function copyImageContent(tabName) {
     const imageArea = document.getElementById(`imagePasteArea-${tabName}`);
-    const range = document.createRange();
+    navigator.clipboard.writeText(imageArea.innerHTML).then(() => {
+        console.log('Image content copied to clipboard');
+    }).catch(err => {
+        console.error('Failed to copy image content: ', err);
+    });
     range.selectNode(imageArea);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
@@ -252,5 +260,27 @@ function insertOrderedList() {
         ol.appendChild(li);
         range.deleteContents();
         range.insertNode(ol);
+    }
+}
+
+
+// Rich text Increase Font Size
+function increaseFontSize() {
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const span = document.createElement('span');
+        span.style.fontSize = 'larger';
+        range.surroundContents(span);
+    }
+}
+// Rich text Decrease Font Size
+function decreaseFontSize() {
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const span = document.createElement('span');
+        span.style.fontSize = 'smaller';
+        range.surroundContents(span);
     }
 }
